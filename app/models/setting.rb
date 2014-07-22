@@ -38,6 +38,7 @@ class Setting < ActiveRecord::Base
           return Integer(value)
         end
       else
+        return nil if value.nil?
         return true if value.downcase == "true"
         return false if value.downcase == "false"
         return value

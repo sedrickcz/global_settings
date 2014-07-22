@@ -39,6 +39,7 @@ I decided to use a regex to convert String to proper Class:
           return Integer(value)
         end
       else
+        return nil if value.nil? 
         return true if value == "true"
         return false if value == "false"
         return value
